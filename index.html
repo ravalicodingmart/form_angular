@@ -1,0 +1,43 @@
+<html>
+<head>
+<script src="js/angular.min.js"></script>
+</head>
+<body>
+<div class="table-form">
+<div ng-app="myApp" ng-controller="myCtrl">
+Name:<input class="input-box" type="text" ng-model="name">
+email:<input class="input-box" type="text" ng-model="email">
+phoneno:<input class="input-box" type="text" ng-model="phoneno">
+<button ng-click="display()">submit</button>
+<button ng-click="update()">update</button>
+<button ng-click="reset()">reset</button>
+<table>
+<tr>
+<th>name</th>
+<th>email</th>
+<th>phoneno</th>
+</tr>
+<tr ng-repeat="person in people">
+<td>
+{{person.name}}
+</td>
+<td>
+{{person.email}}
+</td>
+<td>
+{{person.phoneno}}
+</td>
+<td>
+<button ng-click="delete($index)">delete</button>
+</td>
+<td>
+<button ng-click="edit($index)">edit</button>
+</td>
+</tr>
+</table>
+<script src="js/form.js"></script>
+<link rel="stylesheet" href="">
+</div>
+</div>
+</body>
+</html>
